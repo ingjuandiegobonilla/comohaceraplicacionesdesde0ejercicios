@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aprendiendo</string>
+    <string name="cuadro_de_dialogo">Cuadro de dialogo</string>
+    <string name="text_sound">Clic aqui para reproducir el sonido</string>
 </resources>

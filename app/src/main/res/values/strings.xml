@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Aprendiendo</string>
+    <string name="autocomplete_hint">Busque los meses del año</string>
 </resources>

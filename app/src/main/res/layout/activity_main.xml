@@ -7,4 +7,13 @@
     tools:context=".MainActivity">
 
 
+    <AutoCompleteTextView
+        android:id="@+id/autocomplete_months"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/autocomplete_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:completionThreshold="1"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

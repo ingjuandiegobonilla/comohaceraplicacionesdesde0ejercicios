@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aprendiendo</string>
+    <string name="save_button">Guardar</string>
+    <string name="save_text">Escribe el texto que quieras guardar</string>
 </resources>

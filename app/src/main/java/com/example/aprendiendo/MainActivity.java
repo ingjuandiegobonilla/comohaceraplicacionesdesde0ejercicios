@@ -3,6 +3,7 @@ package com.example.aprendiendo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -14,6 +15,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button runThread;
     int i;
+    Button startHandler;
+    final Handler handle = new Handler();
+
+    protected void Hilo(){
+        Thread hilo = new Thread(){
+            public void run(){
+                try{
+                    System.out.println("Empieza el conteo");
+                    Thread.sleep(10000);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                handle.post(runnable);
+            }
+        };
+        hilo.start();
+    }
+    final Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            Toast.makeText(MainActivity.this,"Estamis en el hilo",Toast.LENGTH_SHORT).show();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }).start();
+        startHandler = findViewById(R.id.start_handler);
+        startHandler.setOnClickListener(this);
 
     }
 
@@ -47,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.run_thread:
                 String valor = String.valueOf(i);
                 Toast.makeText(MainActivity.this, valor, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.start_handler:
+                Toast.makeText(MainActivity.this,"Iniciaremos el hilo",Toast.LENGTH_SHORT).show();
+                Hilo();
                 break;
             default:
                 break;

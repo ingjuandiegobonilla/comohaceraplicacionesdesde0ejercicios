@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Aprendiendo</string>
     <string name="button_thread">Ver informacion del hilo</string>
+    <string name="handler_button">Handler button</string>
 </resources>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aprendiendo</string>
+    <string name="list_header_text">Lista de animes</string>
+    <string name="data_not_found">no se encontro info</string>
 </resources>

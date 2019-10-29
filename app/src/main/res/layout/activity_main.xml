@@ -8,6 +8,16 @@
 
 
     <Button
+        android:id="@+id/asynctask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="384dp"
+        android:text="@string/run_asynctask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/run_thread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

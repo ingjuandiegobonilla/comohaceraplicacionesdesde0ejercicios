@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     };
 
+    Button asyncTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }).start();
         startHandler = findViewById(R.id.start_handler);
         startHandler.setOnClickListener(this);
+        asyncTask = findViewById(R.id.asynctask);
+        asyncTask.setOnClickListener(this);
 
     }
 
@@ -77,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.start_handler:
                 Toast.makeText(MainActivity.this,"Iniciaremos el hilo",Toast.LENGTH_SHORT).show();
                 Hilo();
+                break;
+            case R.id.asynctask:
+                new Asincrona().execute();
                 break;
             default:
                 break;
